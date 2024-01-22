@@ -116,3 +116,12 @@ footer:hover {
         opacity: 1;
     }
 }
+
+.highlight {
+    color: yellow;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
