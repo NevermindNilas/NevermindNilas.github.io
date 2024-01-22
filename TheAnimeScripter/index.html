@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TheAnimeScripter - Comprehensive video processing tool for After Effects">
+    <title>TheAnimeScripter - Video Processing Tool</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="grid-background">
+
+    <header>
+        <h1>TheAnimeScripter</h1>
+        <p>Comprehensive video processing tool for After Effects</p>
+    </header>
+
+    <main>
+        <section class="hover3d">
+            <h2>Key Features</h2>
+            <ol>
+                <li><strong>Interpolation</strong>: Boost your video framerate through frame interpolation.</li>
+                <li><strong>Upscaling</strong>: Enhance the resolution of your videos for an improved viewing experience.</li>
+                <li><strong>Deduplication</strong>: Optimize your video size by removing duplicate frames.</li>
+                <li><strong>Segmentation</strong>: Separate the background from the foreground for easier and faster rotobrushing.</li>
+                <li><strong>Depth Map Generation</strong>: Generate a depth map for 3D effects and more advanced video editing.</li>
+                <li><strong>Auto Clip Cutting</strong>: Increase your productivity by automatically cutting your clips using a Scene Change Filter.</li>
+                <li><strong>Motion Blur</strong>: Add motion blur to your videos for a more realistic look.</li>
+                <li><strong>Integration with After Effects</strong>: Seamlessly use our tool directly inside of After Effects.</li>
+                <li><strong>Model Chaining in After Effects</strong>: Run Deduplication, Upscaling, Interpolation all in one.</li>
+                <li><strong>No Frame Extraction</strong>: The script does 0 frame extraction, everything is being done in memory without additional decode and encode cycles.</li>
+            </ol>
+        </section>
+    
+        <!-- Demo Section -->
+        <section class="hover3d">
+            <h2>Demo</h2>
+            <p>
+                <strong>Deduplicated, Upscaled, Interpolated and Sharpened Demo:</strong>
+            </p>
+            <video class="responsive-video" controls>
+                <source src="https://github.com/NevermindNilas/TheAnimeScripter/assets/128264457/7bca1442-2e49-47fa-99a7-73ba5c7d197b" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    
+        <section class="hover3d">
+            <h2>Getting Started</h2>
+            <!-- Instructions on how to download and manually build -->
+            <div class="instruction-block">
+                <h3>How to Download</h3>
+                <p>Download one of the latest releases from <a href="https://github.com/NevermindNilas/TheAnimeScripter/releases" class="highlight">here</a>.</p>
+            </div>
+            <div class="instruction-block">
+                <h3>Or Manually Build</h3>
+                <p><strong>Note:</strong> The code in the repository may include unexpected bugs. If you want stable builds, download from the releases page. For cutting-edge builds, follow the instructions below:</p>
+                <ol>
+                    <li>Download and install Python 3.12 from: <a class="highlight" href="https://www.python.org/downloads/release/python-3121/">https://www.python.org/downloads/release/python-3121/</a>. Make sure to add it to your System Path.</li>
+                    <li>Git Clone the repository</li>
+                    <li>Open a terminal inside the folder.</li>
+                    <li>Run: <code>python build.py</code></li>
+                </ol>
+            </div>
+            <div class="instruction-block">
+                <h3>How to Use Inside of After Effects</h3>
+                <ol>
+                    <li>On the top left corner, open File -> Scripts -> Install ScriptUI Panel. Look for the TheAnimeScripter.jsx file found in the folder.</li>
+                    <li>After installation, you will be prompted to restart After Effects. Please do so.</li>
+                    <li>After reopening After Effects, go to Window. At the bottom, you should see TheAnimeScripter.jsx. Click it and dock the panel wherever you please.</li>
+                    <li>In the settings panel, set the folder to the same directory as The Anime Scripter and set the output to wherever you please.</li>
+                </ol>
+            </div>
+        </section>
+        <!-- Acknowledgements Section -->
+        <section class="hover3d">
+            <h2>Acknowledgements</h2>
+            <!-- List of acknowledgements -->
+            <ul>
+                <li><a class="highlight" href="https://github.com/styler00dollar/VSGAN-tensorrt-docker">SUDO</a> - For helping me debug my code and shufflecugan model</li>
+                <li><a class="highlight" href="https://github.com/hzwer/Practical-RIFE">HZWER</a> - For Rife.</li>
+                <li><a class="highlight" href="https://github.com/bilibili/ailab/tree/main/Real-CUGAN">AILAB</a> - For Cugan.</li>
+                <li><a class="highlight" href="https://github.com/JingyunLiang/SwinIR">JingyunLiang</a> - For SwinIR.</li>
+                <li><a class="highlight" href="https://github.com/Bubblemint864/AI-Models">Bubble</a> - For the SwinIR Model</li>
+                <li><a class="highlight" href="https://github.com/xinntao/Real-ESRGAN">Xintao</a> - for Realesrgan, specifically compact arch.</li>
+                <li><a class="highlight" href="https://github.com/the-database/mpv-upscale-2x_animejanai">the-database</a> - For Compact, UltraCompact, SuperUltraCompact models</li>
+                <li><a class="highlight" href="https://github.com/Tohrusky/realcugan-ncnn-py">Tohrusky</a> - For RealCugan-NCNN-Vulkan wrapper.</li>
+                <li><a class="highlight" href="https://github.com/SkyTNT/anime-segmentation">SkyTNT</a> - For Anime Segmentation.</li>
+                <li><a class="highlight" href="https://github.com/isl-org/MiDaS">ISL-ORG</a> - For Depth Map Processing.</li>
+                <li><a class="highlight" href="https://github.com/98mxr/GMFSS_Fortuna">98mxr</a> - For GMFSS Fortuna Union.</li>
+                <li><a class="highlight" href="https://github.com/HolyWu/vs-gmfss_fortuna/tree/master">HolyWU</a> - For VS GMFSS code.</li>
+                <li><a class="highlight" href="https://github.com/FFmpeg/FFmpeg">FFmpeg Group</a> - For FFmpeg</li>
+                <li><a class="highlight" href="https://github.com/nihui/rife-ncnn-vulkan">Nihui</a> - For Rife NCNN</li>
+                <li><a class="highlight" href="https://github.com/media2x/rife-ncnn-vulkan-python">Media2x</a> - For Rife NCNN Wrapper</li>
+                <li><a class="highlight" href="https://github.com/TNTwise/rife-ncnn-vulkan">TNTWise</a> - For newest implementations of Rife</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TheAnimeScripter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.hover3d').forEach(elem => {
+            elem.onmousemove = function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                this.style.transform = `perspective(500px) rotateX(${dy/-200}deg) rotateY(${dx/200}deg)`;
+            };
+            elem.onmouseleave = function(e) {
+                this.style.transform = `perspective(500px) rotateX(0) rotateY(0)`;
+            };
+        });
+    </script>
+
+</body>
+</html>
