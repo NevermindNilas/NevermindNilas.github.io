@@ -32,9 +32,6 @@ h1 {
     letter-spacing: 2px; /* New */
 }
 
-section.hover3d {
-    transition: transform 0.2s ease-out;
-}
 section {
     max-width: 800px;
     margin: 0 auto;
@@ -46,6 +43,10 @@ section {
     animation: slideIn 0.5s ease-in-out forwards, fadeInOut 0.5s ease-in-out forwards;
     transition: transform 0.5s ease-in-out;
     transform-style: preserve-3d; /* New */
+}
+
+section {
+    transition: transform 0.2s ease-out;
 }
 
 section:hover {
@@ -101,10 +102,6 @@ footer {
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
     transition: transform 0.5s ease-in-out;
-}
-
-footer:hover {
-    transform: rotateX(5deg) rotateY(5deg);
 }
 
 @keyframes fadeIn {

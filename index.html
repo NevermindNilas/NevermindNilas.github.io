@@ -55,9 +55,10 @@
 
         <section class="hover3d" id="project-link">
             <h2>Check Out My Project</h2>
-            <a href="./projects/theanimescripter" target="_blank">TheAnimeScripter</a>
+            <a href="./projects/theanimescripter.html" target="_blank">TheAnimeScripter</a>
         </section>
     </main>
+    <script src="scripts.js"></script>
 
     <footer class="footer">
         <a href="https://www.buymeacoffee.com/nilas" target="_blank">
@@ -65,24 +66,6 @@
         </a>
         <p>&copy; 2024 NevermindNilas. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.querySelectorAll('.hover3d').forEach(elem => {
-            elem.onmousemove = function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const xc = rect.width / 2;
-                const yc = rect.height / 2;
-                const dx = x - xc;
-                const dy = y - yc;
-                this.style.transform = `perspective(500px) rotateX(${dy/-200}deg) rotateY(${dx/200}deg)`;
-            };
-            elem.onmouseleave = function(e) {
-                this.style.transform = `perspective(500px) rotateX(0) rotateY(0)`;
-            };
-        });
-    </script>
 </body>
 
 </html>
