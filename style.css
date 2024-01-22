@@ -133,3 +133,8 @@ video {
     justify-content: space-between;
     align-items: center;
 }
+
+#project-link img {
+    width: 400px;
+    height: auto;
+}
