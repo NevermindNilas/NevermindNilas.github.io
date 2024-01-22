@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="grid-background">
     <header>
         <h1>Welcome to My GitHub.io Page</h1>
     </header>
 
     <main>
-        <section id="about-me">
+        <section class="hover3d" id="about-me">
             <h2>About Me</h2>
             <p>I'm a passionate Junior Developer with expertise in Python and
                 Javascript. My primary focus lies in the exciting realms of
                 Machine Learning and Data Science.</p>
         </section>
 
-        <section id="skills">
+        <section class="hover3d" id="skills">
             <h2>Skills</h2>
             <ul>
                 <li><strong>Languages:</strong> Python, JavaScript</li>
@@ -32,7 +32,7 @@
             </ul>
         </section>
 
-        <section id="learning">
+        <section class="hover3d" id="learning">
             <h2>Learning</h2>
             <p>I'm always eager to learn and explore new technologies.
                 Currently, I'm diving deeper into video and image data
@@ -40,23 +40,22 @@
                 generation, and many more.</p>
         </section>
 
-        <section id="connect">
+        <section class="hover3d" id="connect">
             <h2>Connect with Me</h2>
             <p>Feel free to reach out! Let's connect and collaborate on
                 interesting projects.</p>
             <p>Email: <a href="mailto:nilascontact@gmail.com" aria-label="Send me an email">nilascontact@gmail.com</a></p>
         </section>
 
-        <section id="github-stats">
+        <section class="hover3d" id="github-stats">
             <h2>GitHub Stats</h2>
             <img
                 src="https://github-readme-stats.vercel.app/api?username=nevermindnilas&show_icons=true&theme=transparent"
                 alt="GitHub Stats">
         </section>
 
-        <section id="project-link">
+        <section class="hover3d" id="project-link">
             <h2>Check Out My Project</h2>
-            <p>Explore my project, TheAnimeScripter, on GitHub.</p>
             <a href="https://github.com/NevermindNilas/TheAnimeScripter"
                 target="_blank">TheAnimeScripter on GitHub</a>
         </section>
@@ -65,6 +64,24 @@
     <footer>
         <p>&copy; 2024 NevermindNilas. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.hover3d').forEach(elem => {
+            elem.onmousemove = function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                this.style.transform = `perspective(500px) rotateX(${dy/-200}deg) rotateY(${dx/200}deg)`;
+            };
+            elem.onmouseleave = function(e) {
+                this.style.transform = `perspective(500px) rotateX(0) rotateY(0)`;
+            };
+        });
+    </script>
 </body>
 
 </html>
