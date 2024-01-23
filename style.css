@@ -126,6 +126,8 @@ video {
 .responsive-video {
     max-width: 100%;
     height: auto;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .footer {
