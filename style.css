@@ -134,9 +134,15 @@ video {
     align-items: center;
 }
 
-#project-link img {
+#project-link {
     width: 400px;
     height: auto;
+    border-radius: 5%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#project-link:hover {
+    transform: scale(1.03);
 }
 
 @media screen and (max-width: 600px) {
