@@ -4,7 +4,7 @@ body {
     font-family: 'Sans-serif', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* New */
+    line-height: 1.6;
 }
 
 body.grid-background {
@@ -28,8 +28,8 @@ header img {
 h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-transform: uppercase; /* New */
-    letter-spacing: 2px; /* New */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 section {
@@ -42,7 +42,7 @@ section {
     opacity: 0;
     animation: slideIn 0.5s ease-in-out forwards, fadeInOut 0.5s ease-in-out forwards;
     transition: transform 0.5s ease-in-out;
-    transform-style: preserve-3d; /* New */
+    transform-style: preserve-3d;
 }
 
 section {
@@ -50,7 +50,7 @@ section {
 }
 
 section:hover {
-    transform: rotateY(20deg); /* New */
+    transform: rotateY(20deg);
 }
 
 @keyframes fadeInOut {
@@ -67,8 +67,8 @@ h2 {
     font-size: 1.5em;
     color: #ffcc00;
     margin-bottom: 20px;
-    text-transform: uppercase; /* New */
-    letter-spacing: 1px; /* New */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 ul {
@@ -137,4 +137,13 @@ video {
 #project-link img {
     width: 400px;
     height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    .instruction-block {
+        padding: 10px;
+    }
 }
